@@ -45,7 +45,7 @@ def rank(gen_action, metric, k):
     ids = [i[0] for i in scores]
 
     print(ids)
-    thesis = pd.read_excel('/data/workspace/holly0015/test_project1/project1/src/thesis/parsed/thesis_list.xlsx')
+    #thesis = pd.read_excel('/data/workspace/holly0015/test_project1/project1/src/thesis/parsed/thesis_list.xlsx')
 
     # for i in range(k):
     #     scores[i].extend([thesis['article_title'][ids]])
