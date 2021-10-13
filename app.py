@@ -43,12 +43,21 @@ def rank(gen_action, metric, k):
     scores = list(sorted(scores, key = lambda x: x[1]))
     scores = scores[:k]
     ids = [i[0] for i in scores]
-    for i in range(k):
-        scores[i].extend([meta[str(scores[i][0])]['omdb'][key]  for key in ['Title',
-                                                                            'Genre', 'imdbRating']])
-    indexes = ['id', 'score', 'Title', 'Genre', 'imdbRating']
-    table_dict = dict([(key, [i[idx] for i in scores]) for idx, key in enumerate(indexes)])
-    table = pd.DataFrame(table_dict)
+
+    print(ids)
+    thesis = pd.read_excel('/data/workspace/holly0015/test_project1/project1/src/thesis/parsed/thesis_list.xlsx')
+
+    # for i in range(k):
+    #     scores[i].extend([thesis['article_title'][ids]])
+    #
+    #
+    # for i in range(k):
+    #     scores[i].extend([meta[str(scores[i][0])]['omdb'][key]  for key in ['Title',
+    #                                                                         'Genre', 'imdbRating']])
+    # indexes = ['id', 'score', 'Title', 'Genre', 'imdbRating']
+    # table_dict = dict([(key, [i[idx] for i in scores]) for idx, key in enumerate(indexes)])
+    #table = pd.DataFrame(table_dict)
+    table = pd.DataFrame(scores)
     return table
 
 
