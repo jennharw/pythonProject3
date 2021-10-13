@@ -1,4 +1,4 @@
-# pythonProject3
+# pythonProject
 @misc{RecNN,
   author = {M Scherbina},
   title = {RecNN: RL Recommendation with PyTorch},
